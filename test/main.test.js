@@ -7,24 +7,24 @@ descirbe("homepage", function() {
   })
 })
 
-descirbe("post form", function() {
-  it("Posting data from the form to the data set", function(done){
-    request(app).post("/post")
-    .send({"people":[{"firstname":["tommy","Chris","Alex","tommy","Natalie"],"surname":["tommy","Kamara","Hammond","White","Sawyer"]}]})
+descirbe("Create user", function() {
+  it("Creates a new user when the first form is sent", function(done){
+    request(app).post("/createUser")
+    .send({"__v":0,"created":"2017-08-21T22:07:27.958Z","email":"samjones@jones.com","surname":"jones","forename":"sam","_id":"599b599f3395a51675f89e3e"})
     .expect(200)
   })
 })
 
 descirbe("get all data route call", function() {
   it("Show that the correct data is shown when route is sent", function(done){
-    request(app).get("/getData")
-    .expect({"people":[{"firstname":["tommy","Chris","Alex","tommy","Natalie"],"surname":["tommy","Kamara","Hammond","White","Sawyer"]}]})
+    request(app).get("/getUserSavedToFile")
+    .expect({"__v":0,"created":"2017-08-21T22:07:27.958Z","email":"samjones@jones.com","surname":"jones","forename":"sam","_id":"599b599f3395a51675f89e3e"})
     .expect(200)
   })
 })
 
-descirbe("get all data route call", function() {
-  it("Show that the correct data is shown when route is sent", function(done){
+descirbe("Incorrect route call", function() {
+  it("Show a 404 if an incorrect route is called", function(done){
     request(app).get("/notARealURL")
     .expect(404)
   })

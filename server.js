@@ -10,11 +10,11 @@ var dataController = require('./Controllers/dataController');
 app.use(bodyParser());
 
 app.get('/', dataController.getForm);
-//I understand that this is essentially get all data from file
+//I understand that this is essentially get all data from file..
 //ideally youd want a lookup to your database matching name/id (will happily implement if required)
 app.get('/getUserSavedToFile', dataController.getUserInFile);
 app.post('/createUser', dataController.createUser);
-//Could implment this in a more safer way but purely for this demos purpose, works effectivley
+//Could implement this in a more safer way but purely for this demos purpose, works effectivley
 app.put('/updateUserByFirstname/:nameToChange/:updatedName', dataController.updateUserByFirstname);
 app.delete('/removeAllDataFromFile', dataController.removeAllData);
 

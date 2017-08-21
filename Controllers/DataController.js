@@ -2,10 +2,10 @@ var fs = require("fs");
 var User = require('../models/User');
 
 //Decided to use a simple JSON file to store the data, easier for people to see its working rather than set up mongo
-//note: SET IT UP SO THE FILE ONLY STORES ONE USER AT A TIME ( again ease of viewing changes that were made )
+//note: I HAVE SET IT UP SO THE FILE ONLY STORES ONE USER AT A TIME ( again ease of viewing changes that were made )
 let FILE = "/Users/sambowen-hughes/Desktop/UserApp/database.json";
 var fileExists = fs.existsSync(FILE);
-// File Data saved to a USER object since there is no other user in the file contents
+// File Contents saved to a USER object since there is no other user in the file contents
 let USER = {};
 //DATA class for ease of manipulation of data
 function createObject (data) {
