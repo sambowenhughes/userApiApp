@@ -20,3 +20,5 @@ All routes are listed in my server.js
 Please note: only recently been playing with ES6 so understand if there are some core aspects that could be wrong
 would really appreciate if any bad practises or habits could be pointed out. Also, if you feel that my implementation
 is lacking in any way. Send it back to me and I can assure you I will make the changes necessary.
+
+If you have any questions about my code, email: sambowenhughes@hotmail.co.uk
